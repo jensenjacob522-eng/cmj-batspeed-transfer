@@ -91,6 +91,12 @@ This framework helps distinguish:
 
 ---
 
+Full Data Source
+
+Wasserberger, K.W., Brady, A.C., Besky, D.M., Jones, B.R., & Boddy, K.J. (2022).
+The OpenBiomechanics Project: The open source initiative for anonymized, elite-level athletic motion capture data.
+https://github.com/drivelineresearch/openbiomechanics
+
 # Quick Start (Reproducible Demo)
 
 Clone the repository and run the projection tool using the included demo dataset:
