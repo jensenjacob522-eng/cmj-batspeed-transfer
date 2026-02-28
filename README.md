@@ -2,37 +2,58 @@
 
 A level-stratified regression framework analyzing the relationship between countermovement jump (CMJ) height and bat speed across competitive levels.
 
-This project investigates how lower-body force production transfers to rotational bat speed, and how that relationship changes from High School to Professional athletes.
+This project investigates how lower-body force production transfers to rotational bat speed — and how that relationship changes from High School to Professional athletes.
+
+It also includes a reproducible CLI-based projection tool for individual athlete evaluation.
 
 ---
 
 ## Objective
 
-To quantify how much variance in bat speed can be explained by CMJ height at different competitive levels, and to separate:
+To:
 
-- Raw force production capacity  
-- Transfer efficiency (technical/kinematic contribution)  
+- Quantify how much variance in bat speed can be explained by CMJ height across competitive levels
+- Separate raw force production capacity from transfer efficiency
+- Build a reproducible projection tool for athlete-specific bat speed estimation
+
+This framework allows evaluation of whether performance limitations are primarily strength-based or transfer/technical in nature.
 
 ---
 
 ## Modeling Approach
 
-Pipeline includes:
+### 1️⃣ Automated Data Cleaning
 
-- Automated data cleaning  
-  - Removes bat speeds < 40 mph  
-  - Removes ±3 SD outliers  
+- Removes bat speeds < 40 mph  
+- Removes ±3 SD outliers  
+- Handles missing values programmatically  
 
-- Level-stratified linear regression models  
-  - High School  
-  - College  
-  - Professional  
+### 2️⃣ Level-Stratified Linear Regression
 
-- Residual-based transfer efficiency analysis  
-  - Residual = Actual − Predicted  
-  - Identifies over- and under-performers relative to force capacity  
+Separate regression models are fit for:
 
-- Automated HTML + PDF report generation  
+- High School
+- College
+- Professional
+
+This allows slope and correlation comparisons across levels.
+
+### 3️⃣ Residual-Based Transfer Efficiency Analysis
+
+Residual = Actual − Predicted
+
+Used to identify:
+- Over-performers (efficient transfer)
+- Under-performers (force production not translating)
+
+### 4️⃣ Athlete Projection Tool
+
+The `predict_batspeed.py` script:
+
+- Fits a level-filtered regression model
+- Predicts bat speed from CMJ height
+- Computes bootstrap 95% confidence intervals
+- Automatically generates HTML + PDF reports
 
 ---
 
@@ -40,12 +61,12 @@ Pipeline includes:
 
 High School: r ≈ 0.56  
 College: r ≈ 0.45  
-Pro: r ≈ 0.21  
+Professional: r ≈ 0.21  
 
-Predictive slope decreases as level increases, suggesting:
+The predictive slope decreases as level increases, suggesting:
 
-- Raw force production explains more variance at lower levels  
-- Transfer efficiency and technical sequencing become more dominant at elite levels  
+- Raw force production explains more variance at lower levels
+- Transfer efficiency and sequencing become more dominant at elite levels
 
 ---
 
@@ -53,36 +74,35 @@ Predictive slope decreases as level increases, suggesting:
 
 This framework helps distinguish:
 
-- Athletes limited by force production  
-- Athletes limited by transfer efficiency  
+- Athletes limited by force production
+- Athletes limited by transfer efficiency
 
-Coaching implications:
+### Coaching Implications
 
-- HS: Emphasize force development  
-- College: Blend force + sequencing  
-- Pro: Emphasize transfer efficiency and mechanics  
+High School  
+→ Emphasize force development
 
----
+College  
+→ Blend force development + sequencing refinement
 
-## Data Source
-
-This project utilizes anonymized elite-level athlete performance data from:
-
-Wasserberger, K.W., Brady, A.C., Besky, D.M., Jones, B.R., & Boddy, K.J. (2022).  
-*The OpenBiomechanics Project: The open source initiative for anonymized, elite-level athletic motion capture data.*  
-Available at: https://github.com/drivelineresearch/openbiomechanics  
-
-This repository is an independent analytical implementation and is not affiliated with Driveline Baseball.
+Professional  
+→ Emphasize transfer efficiency, mechanics, and kinetic chain timing
 
 ---
 
-## Running the Report
+# Quick Start (Reproducible Demo)
+
+Clone the repository and run the projection tool using the included demo dataset:
 
 ```bash
-python driveline_transfer_report.py --input data/hp_obp.csv
-```
+git clone https://github.com/jensenjacob522-eng/cmj-batspeed-transfer
+cd cmj-batspeed-transfer
 
----
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python predict_batspeed.py --input data/demo_data.csv --level College --athlete_cmj 35
 
 ## Development Notes
 
