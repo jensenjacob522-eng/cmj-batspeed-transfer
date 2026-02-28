@@ -12,9 +12,9 @@ It also includes a reproducible CLI-based projection tool for individual athlete
 
 To:
 
-- Quantify how much variance in bat speed can be explained by CMJ height across competitive levels
-- Separate raw force production capacity from transfer efficiency
-- Build a reproducible projection tool for athlete-specific bat speed estimation
+- Quantify how much variance in bat speed can be explained by CMJ height across competitive levels  
+- Separate raw force production capacity from transfer efficiency  
+- Build a reproducible projection tool for athlete-specific bat speed estimation  
 
 This framework allows evaluation of whether performance limitations are primarily strength-based or transfer/technical in nature.
 
@@ -32,28 +32,29 @@ This framework allows evaluation of whether performance limitations are primaril
 
 Separate regression models are fit for:
 
-- High School
-- College
-- Professional
+- High School  
+- College  
+- Professional  
 
 This allows slope and correlation comparisons across levels.
 
 ### 3️⃣ Residual-Based Transfer Efficiency Analysis
 
-Residual = Actual − Predicted
+**Residual = Actual − Predicted**
 
 Used to identify:
-- Over-performers (efficient transfer)
-- Under-performers (force production not translating)
+
+- Over-performers (efficient transfer)  
+- Under-performers (force production not translating)  
 
 ### 4️⃣ Athlete Projection Tool
 
 The `predict_batspeed.py` script:
 
-- Fits a level-filtered regression model
-- Predicts bat speed from CMJ height
-- Computes bootstrap 95% confidence intervals
-- Automatically generates HTML + PDF reports
+- Fits a level-filtered regression model  
+- Predicts bat speed from CMJ height  
+- Computes bootstrap 95% confidence intervals  
+- Automatically generates HTML + PDF reports  
 
 ---
 
@@ -65,8 +66,8 @@ Professional: r ≈ 0.21
 
 The predictive slope decreases as level increases, suggesting:
 
-- Raw force production explains more variance at lower levels
-- Transfer efficiency and sequencing become more dominant at elite levels
+- Raw force production explains more variance at lower levels  
+- Transfer efficiency and sequencing become more dominant at elite levels  
 
 ---
 
@@ -74,19 +75,19 @@ The predictive slope decreases as level increases, suggesting:
 
 This framework helps distinguish:
 
-- Athletes limited by force production
-- Athletes limited by transfer efficiency
+- Athletes limited by force production  
+- Athletes limited by transfer efficiency  
 
 ### Coaching Implications
 
-High School  
-→ Emphasize force development
+**High School**  
+→ Emphasize force development  
 
-College  
-→ Blend force development + sequencing refinement
+**College**  
+→ Blend force development + sequencing refinement  
 
-Professional  
-→ Emphasize transfer efficiency, mechanics, and kinetic chain timing
+**Professional**  
+→ Emphasize transfer efficiency, mechanics, and kinetic chain timing  
 
 ---
 
