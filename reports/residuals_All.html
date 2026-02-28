@@ -1,0 +1,289 @@
+
+    <html>
+      <body style="font-family:Arial;padding:20px">
+        <h2>Residual Report: CMJ → Bat Speed</h2>
+        <p><b>File:</b> data/hp_obp.csv &nbsp; | &nbsp; <b>Filter:</b> All</p>
+        <p><b>Columns used:</b> CMJ = <code>jump_height_(imp-mom)_[cm]_mean_cmj</code> | Bat = <code>bat_speed_mph</code></p>
+        <p><b>Model:</b> bat_speed = 0.6364 * cmj + 38.6385</p>
+
+        <h3>Plot</h3>
+        <img src="figures/residuals_scatter_All.png" style="max-width:900px;margin-top:10px"/>
+
+        <h3>Top Overperformers (Actual > Predicted)</h3>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>athlete_uid</th>
+      <th>playing_level</th>
+      <th>cmj_jump_height_cm</th>
+      <th>actual_bat_speed_mph</th>
+      <th>pred_bat_speed_mph</th>
+      <th>residual_mph</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a31ca164-1910-49c3-8abb-83555e16da5b</td>
+      <td>Pro</td>
+      <td>33.90</td>
+      <td>77.20</td>
+      <td>60.21</td>
+      <td>16.99</td>
+    </tr>
+    <tr>
+      <td>a31ca164-1910-49c3-8abb-83555e16da5b</td>
+      <td>Pro</td>
+      <td>36.17</td>
+      <td>78.40</td>
+      <td>61.66</td>
+      <td>16.74</td>
+    </tr>
+    <tr>
+      <td>89d9ac05-56b2-4872-991f-c0e079473e59</td>
+      <td>College</td>
+      <td>47.31</td>
+      <td>85.40</td>
+      <td>68.75</td>
+      <td>16.65</td>
+    </tr>
+    <tr>
+      <td>7845b762-4cb8-426b-ad8c-7879afa1dc48</td>
+      <td>College</td>
+      <td>39.43</td>
+      <td>77.90</td>
+      <td>63.73</td>
+      <td>14.17</td>
+    </tr>
+    <tr>
+      <td>7845b762-4cb8-426b-ad8c-7879afa1dc48</td>
+      <td>College</td>
+      <td>37.38</td>
+      <td>75.60</td>
+      <td>62.43</td>
+      <td>13.17</td>
+    </tr>
+    <tr>
+      <td>70ffd727-f23b-4b7b-b3d9-c969930f862c</td>
+      <td>Pro</td>
+      <td>40.63</td>
+      <td>77.60</td>
+      <td>64.50</td>
+      <td>13.10</td>
+    </tr>
+    <tr>
+      <td>df9af48e-d659-4053-8179-4e095b0f0fcb</td>
+      <td>College</td>
+      <td>34.59</td>
+      <td>73.70</td>
+      <td>60.65</td>
+      <td>13.05</td>
+    </tr>
+    <tr>
+      <td>0f804358-6073-4080-8366-a9c7e7651d8c</td>
+      <td>College</td>
+      <td>33.13</td>
+      <td>72.50</td>
+      <td>59.72</td>
+      <td>12.78</td>
+    </tr>
+    <tr>
+      <td>51768226-d953-4d9f-b972-1490654b29e9</td>
+      <td>College</td>
+      <td>31.26</td>
+      <td>71.20</td>
+      <td>58.53</td>
+      <td>12.67</td>
+    </tr>
+    <tr>
+      <td>7b89bd06-e271-4cc4-9206-26ebe8cafd8a</td>
+      <td>Pro</td>
+      <td>36.36</td>
+      <td>74.10</td>
+      <td>61.78</td>
+      <td>12.32</td>
+    </tr>
+    <tr>
+      <td>70ffd727-f23b-4b7b-b3d9-c969930f862c</td>
+      <td>Pro</td>
+      <td>41.80</td>
+      <td>77.50</td>
+      <td>65.24</td>
+      <td>12.26</td>
+    </tr>
+    <tr>
+      <td>7b89bd06-e271-4cc4-9206-26ebe8cafd8a</td>
+      <td>Pro</td>
+      <td>37.85</td>
+      <td>74.90</td>
+      <td>62.73</td>
+      <td>12.17</td>
+    </tr>
+    <tr>
+      <td>70ffd727-f23b-4b7b-b3d9-c969930f862c</td>
+      <td>Pro</td>
+      <td>42.30</td>
+      <td>77.70</td>
+      <td>65.56</td>
+      <td>12.14</td>
+    </tr>
+    <tr>
+      <td>70ffd727-f23b-4b7b-b3d9-c969930f862c</td>
+      <td>Pro</td>
+      <td>41.12</td>
+      <td>76.90</td>
+      <td>64.81</td>
+      <td>12.09</td>
+    </tr>
+    <tr>
+      <td>8ab94528-857f-422e-b7d7-33e85bbd6219</td>
+      <td>College</td>
+      <td>30.19</td>
+      <td>69.90</td>
+      <td>57.85</td>
+      <td>12.05</td>
+    </tr>
+  </tbody>
+</table>
+
+        <h3>Top Underperformers (Actual < Predicted)</h3>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>athlete_uid</th>
+      <th>playing_level</th>
+      <th>cmj_jump_height_cm</th>
+      <th>actual_bat_speed_mph</th>
+      <th>pred_bat_speed_mph</th>
+      <th>residual_mph</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4f64200e-e888-4d49-a8aa-5d7736925fc7</td>
+      <td>High School</td>
+      <td>23.74</td>
+      <td>21.40</td>
+      <td>53.75</td>
+      <td>-32.35</td>
+    </tr>
+    <tr>
+      <td>cad8956e-aaa6-45a6-a9f6-a54fcb0fcb4f</td>
+      <td>High School</td>
+      <td>24.26</td>
+      <td>29.70</td>
+      <td>54.08</td>
+      <td>-24.38</td>
+    </tr>
+    <tr>
+      <td>7c830052-b89f-4797-98b4-48795050361f</td>
+      <td>High School</td>
+      <td>18.63</td>
+      <td>29.00</td>
+      <td>50.49</td>
+      <td>-21.49</td>
+    </tr>
+    <tr>
+      <td>0d81e7b4-7585-4fd5-9bd0-d7be2f551c44</td>
+      <td>High School</td>
+      <td>27.10</td>
+      <td>36.70</td>
+      <td>55.89</td>
+      <td>-19.19</td>
+    </tr>
+    <tr>
+      <td>a2b6b021-1bf5-43b3-be94-acc92766806d</td>
+      <td>High School</td>
+      <td>34.89</td>
+      <td>41.90</td>
+      <td>60.84</td>
+      <td>-18.94</td>
+    </tr>
+    <tr>
+      <td>28c968a5-e8de-4ad0-b712-421db00aa2fa</td>
+      <td>High School</td>
+      <td>23.45</td>
+      <td>36.60</td>
+      <td>53.56</td>
+      <td>-16.96</td>
+    </tr>
+    <tr>
+      <td>e5bc92af-9290-4511-bb94-964d15ed74f1</td>
+      <td>High School</td>
+      <td>17.86</td>
+      <td>33.10</td>
+      <td>50.00</td>
+      <td>-16.90</td>
+    </tr>
+    <tr>
+      <td>79fdd630-4e5d-42fe-a4d6-c021def4991b</td>
+      <td>College</td>
+      <td>45.12</td>
+      <td>50.70</td>
+      <td>67.35</td>
+      <td>-16.65</td>
+    </tr>
+    <tr>
+      <td>b39d3237-99d4-4996-b5d5-126154ef98dd</td>
+      <td>College</td>
+      <td>43.28</td>
+      <td>49.80</td>
+      <td>66.18</td>
+      <td>-16.38</td>
+    </tr>
+    <tr>
+      <td>01ee0b01-001e-4432-90ed-545dbeb4fc8b</td>
+      <td>High School</td>
+      <td>19.87</td>
+      <td>35.10</td>
+      <td>51.28</td>
+      <td>-16.18</td>
+    </tr>
+    <tr>
+      <td>01e3dc73-034a-439c-a3e0-6a815197c02f</td>
+      <td>High School</td>
+      <td>27.49</td>
+      <td>40.30</td>
+      <td>56.13</td>
+      <td>-15.83</td>
+    </tr>
+    <tr>
+      <td>d7046494-e894-4854-9428-b708fcab8d8b</td>
+      <td>College</td>
+      <td>36.01</td>
+      <td>46.40</td>
+      <td>61.56</td>
+      <td>-15.16</td>
+    </tr>
+    <tr>
+      <td>0759082e-6140-4b06-bd88-5aa025684238</td>
+      <td>College</td>
+      <td>41.90</td>
+      <td>50.20</td>
+      <td>65.30</td>
+      <td>-15.10</td>
+    </tr>
+    <tr>
+      <td>1f8f6165-f4e0-4a5c-8b17-cefcd7b89a65</td>
+      <td>High School</td>
+      <td>32.16</td>
+      <td>44.60</td>
+      <td>59.11</td>
+      <td>-14.51</td>
+    </tr>
+    <tr>
+      <td>75483867-2072-41fc-8f9c-6e52a78cee66</td>
+      <td>High School</td>
+      <td>38.06</td>
+      <td>49.00</td>
+      <td>62.86</td>
+      <td>-13.86</td>
+    </tr>
+  </tbody>
+</table>
+
+        <p style="margin-top:16px;color:#666">
+          Residual = Actual Bat Speed − Predicted Bat Speed. Positive = overperformer, Negative = underperformer.
+        </p>
+      </body>
+    </html>
+    
