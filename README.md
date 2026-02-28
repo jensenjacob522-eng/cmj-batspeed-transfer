@@ -22,7 +22,15 @@ Pro: r ≈ 0.21
 
 Predictive slope decreases as level increases, suggesting raw force production becomes less explanatory at elite levels.
 
-Wasserberger KW, Brady AC, Besky DM, Jones BR, Boddy KJ. The OpenBiomechanics Project: The open source initiative for anonymized, elite-level athletic motion capture data. (2022).
+## Data Source
+
+This project utilizes anonymized elite-level athlete performance data from:
+
+Wasserberger, K.W., Brady, A.C., Besky, D.M., Jones, B.R., & Boddy, K.J. (2022).  
+*The OpenBiomechanics Project: The open source initiative for anonymized, elite-level athletic motion capture data.*  
+Available at: https://github.com/drivelineresearch/openbiomechanics
+
+This repository is an independent analytical implementation and is not affiliated with Driveline Baseball.
 
 ## Run the Report
 
