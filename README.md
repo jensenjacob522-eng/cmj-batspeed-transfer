@@ -103,12 +103,3 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 python predict_batspeed.py --input data/demo_data.csv --level College --athlete_cmj 35
-
-## Development Notes
-
-Built using an agent-assisted workflow:
-- AI-assisted scaffolding of analysis pipeline
-- Iterative debugging and refactoring
-- Automated filtering logic
-- Modularized metric and plotting functions
-- Reproducible environment via requirements.txt
