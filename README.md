@@ -22,6 +22,8 @@ Pro: r ≈ 0.21
 
 Predictive slope decreases as level increases, suggesting raw force production becomes less explanatory at elite levels.
 
+Wasserberger KW, Brady AC, Besky DM, Jones BR, Boddy KJ. The OpenBiomechanics Project: The open source initiative for anonymized, elite-level athletic motion capture data. (2022).
+
 ## Run the Report
 
 ```bash
