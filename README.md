@@ -5,7 +5,7 @@ A level-stratified regression framework analyzing the relationship between count
 This project investigates how lower-body force production transfers to rotational bat speed, and how that relationship changes from High School to Professional athletes.
 
 Objective
-To quantify how much variance in bat speed can be explained by CMJ height at different competitive levels, and to separate:
+to quantify how much variance in bat speed can be explained by CMJ height at different competitive levels, and to separate:
 Raw force production capacity
 Transfer efficiency (technical/kinematic contribution)
 
