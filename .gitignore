@@ -1,0 +1,22 @@
+# --- Mac ---
+.DS_Store
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+
+# --- Virtual environments ---
+.venv/
+
+# --- Generated outputs ---
+reports/
+*.pdf
+*.png
+*.html
+
+# --- Data (keep your raw data out of git) ---
+data/*.csv
+
+# --- VS Code ---
+.vscode/
